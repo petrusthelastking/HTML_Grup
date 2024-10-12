@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="GLOBAL.css" />
+    <link rel="stylesheet" href="PROJEK2.css" />
+    <!-- Tautan di dalam head dihapus karena salah tempat -->
+  </head>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <body>
+    <div class="weave">
+      <div class="div">
+        <div class="overlap">
+          <header class="header">
+            <div class="frame">
+              <div class="text-wrapper">WEAVE</div>
+              <div class="div-2">
+                <div class="text">
+                  <div class="text-wrapper-2">EXPLORE</div>
+                </div>
+                <div class="icon"><img class="outline-interface" src="img-arrow-right.svg" /></div>
+              </div>
+
+              <!-- Bagian navbar dengan tautan Gallery -->
+              <div class="navbar">
+                <div class="text-wrapper-3">About</div>
+                <div class="text-wrapper-3">Features</div>
+                <div class="text-wrapper-3">Gallery</div>
+                <div class="text-wrapper-3">Support</div>
+              </div>
+            </div>
+            
+            <script>
+              window.addEventListener("scroll", function() {
+                var parallax = document.querySelector('.header');
+                var scrollPosition = window.pageYOffset;
+                parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+              });
+            </script>
+            <script>
+              // Fungsi smooth scroll dengan kecepatan yang diatur
+              function smoothScroll(target, duration) {
+                var targetElement = document.querySelector(target);
+                var targetPosition = targetElement.getBoundingClientRect().top;
+                var startPosition = window.pageYOffset;
+                var startTime = null;
+        
+                function animationScroll(currentTime) {
+                  if (startTime === null) startTime = currentTime;
+                  var timeElapsed = currentTime - startTime;
+                  var scroll = ease(timeElapsed, startPosition, targetPosition, duration);
+                  window.scrollTo(0, scroll);
+                  if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+                }
+        
+                function ease(t, b, c, d) {
+                  t /= d / 2;
+                  if (t < 1) return (c / 2) * t * t + b;
+                  t--;
+                  return (-c / 2) * (t * (t - 2) - 1) + b;
+                }
+        
+                requestAnimationFrame(animationScroll);
+              }
+        
+              // Event listener untuk link yang ingin di-scroll
+              document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  var targetId = this.getAttribute('href');
+                  smoothScroll(targetId, 10000); // Atur durasi scroll dalam milidetik (misalnya 1000ms = 1 detik)
+                });
+              });
+            </script>
+            <div class="frame-2">
+              <div class="div-wrapper"><div class="text-wrapper-4">Air Purifier</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-4">Eco Friendly</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-4">Efficient</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-4">Innovative</div></div>
+            </div>
+            <div class="frame-3">
+              <div class="frame-4">
+                <img class="ellipse" src="img-ellipse-2.png" /> <img class="img" src="img-ellipse-4.png" />
+              </div>
+              <img class="element-review-from-our" src="img-12k-review-from-our-users.svg" />
+            </div>
+            <div class="overlap-group">
+              <div class="text-wrapper-5">WEAVE</div>
+              <div class="picture">
+                <div class="overlap-group-2">
+                  <img class="mask-group" src="img-mask-group.png" /> <img class="image" src="img-image-2146-2-1.png" />
+                </div>
+              </div>
+              <div class="overlap-wrapper">
+                <div class="overlap-2">
+                  <div class="overlap-group-wrapper">
+                    <div class="overlap-3">
+                      <img class="vector" src="img-vector-12.svg" />
+                      <div class="frame-5">
+                        <div class="ellipse-wrapper"><div class="ellipse-2"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <div class="overlap-4">
+                      <div class="text-wrapper-6">Green Power Clean Air</div>
+                      <p class="p">
+                        The Weave uses minimal energy while delivering powerful air purification, removing 99.9% of
+                        airborne pollutants
+                      </p>
+                      <div class="huge-icon-arrows-wrapper">
+                        <img class="huge-icon-arrows" src="img-arrow-right-2.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-6">
+                <div class="overlap-5">
+                  <div class="frame-7">
+                    <div class="overlap-6">
+                      <div class="frame-8">
+                        <div class="ellipse-wrapper"><div class="ellipse-2"></div></div>
+                      </div>
+                      <img class="vector-2" src="img-vector-12-2.svg" />
+                    </div>
+                  </div>
+                  <div class="frame-9">
+                    <img class="rectangle" src="img_rectangle-161124503.png" />
+                    <div class="frame-10">
+                      <div class="text-wrapper-7">Play</div>
+                      <div class="div-2">
+                        <img class="play" src="img-play.svg" /> <img class="play" src="img-play.svg" />
+                      </div>
+                    </div>
+                    <div class="text-wrapper-8">Ultra-Clean Filtration</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="about-weave">
+            <div class="overlap-7">
+              <img class="union" src="img-union-4.svg" />
+              <div class="frame-11">
+                <div class="about-WEAVE">/ABOUT WEAVE</div>
+                <div class="text-wrapper-9">CLEANER LIVING</div>
+                <div class="text-wrapper-9">ENVIRONMENT</div>
+              </div>
+              <div class="frame-12">
+                <img class="rectangle-2" src="img_rectangle-161124726.png" />
+                <div class="frame-13">
+                  <p class="text-wrapper-10">
+                    Transforming the air you breathe, providing advanced solutions for a healthier with cutting-edge air
+                    purification technology.
+                  </p>
+                  <button class="button-CTA">
+                    <div class="learn-more-wrapper"><div class="learn-more">LEARN MORE</div></div>
+                    <div class="outline-interface-wrapper">
+                      <img class="outline-interface" src="img-arrow-right.svg" />
+                    </div>
+                  </button>
+                </div>
+                <img class="play-circle" src="img-play-circle.svg" />
+              </div>
+              <div class="text-wrapper-11">WEAVE</div>
+              <div class="frame-wrapper">
+                <div class="magnifying-glass-wrapper">
+                  <img class="magnifying-glass" src="img-magnifying-glass.svg" />
+                </div>
+              </div>
+              <div class="text-wrapper-12">[Established 2024]</div>
+              <div class="frame-14">
+                <img class="arrow-down" src="img-arrow-down.svg" />
+                <div class="text-wrapper-13">Scroll down</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="features">
+          <div class="overlap-8">
+            <div class="overlap-9">
+              <div class="group-2">
+                <div class="text-wrapper-14">P</div>
+                <div class="text-wrapper-15">U</div>
+                <div class="text-wrapper-16">R</div>
+                <div class="text-wrapper-17">E</div>
+                <div class="overlap-group-3">
+                  <div class="text-2"></div>
+                  <div class="text-wrapper-18">A</div>
+                  <div class="text-wrapper-19">I</div>
+                </div>
+                <div class="text-wrapper-20">R</div>
+                <div class="text-3"></div>
+                <div class="text-wrapper-21">P</div>
+                <div class="text-wrapper-22">U</div>
+                <div class="text-wrapper-23">R</div>
+                <div class="overlap-10">
+                  <div class="text-wrapper-24">E</div>
+                  <div class="overlap-11">
+                    <div class="text-4"></div>
+                    <div class="overlap-12">
+                      <div class="text-wrapper-25">L</div>
+                      <div class="text-wrapper-26">I</div>
+                      <div class="text-wrapper-27">V</div>
+                    </div>
+                    <div class="text-wrapper-28">I</div>
+                  </div>
+                  <div class="text-wrapper-29">N</div>
+                </div>
+                <div class="text-wrapper-30">G</div>
+              </div>
+              <div class="frame-15">
+                <p class="span-wrapper"><span class="span">/Features</span></p>
+                <div class="frame-16">
+                  <div class="the-future-of">THE FUTURE OF</div>
+                  <div class="clean-air">CLEAN AIR</div>
+                </div>
+              </div>
+              <div class="frame-17">
+                <div class="frame-18">
+                  <div class="frame-19">
+                    <img class="img-2" src="img-seal-check.svg" />
+                    <div class="text-wrapper-31">Sleek and Modern Design</div>
+                  </div>
+                  <p class="text-wrapper-32">
+                    Its compact and elegant appearance makes it a stylish addition to any room, providing clean air
+                    without compromising on aesthetics.
+                  </p>
+                </div>
+                <img class="rectangle-3" src="img_image.png" />
+              </div>
+              <div class="frame-20">
+                <div class="overlap-13">
+                  <img class="transparent" src="img-transparent-background-removed-2.png" />
+                  <div class="group-3">
+                    <div class="ellipse-3"></div>
+                    <div class="frame-21">
+                      <img class="img-2" src="img-lightbulb-filament.svg" />
+                      <div class="text-wrapper-33">Smart Sensor Technology</div>
+                    </div>
+                  </div>
+                  <div class="group-4">
+                    <div class="ellipse-4"></div>
+                    <div class="frame-21">
+                      <img class="img-2" src="img-funnel.svg" />
+                      <div class="text-wrapper-33">Superior Filtration Technology</div>
+                    </div>
+                  </div>
+                  <div class="group-5">
+                    <div class="ellipse-5"></div>
+                    <div class="frame-22">
+                      <img class="img-2" src="img-speaker-simple-low.svg" />
+                      <div class="text-wrapper-33">Ultra-Quiet Operation</div>
+                    </div>
+                  </div>
+                  <div class="group-6">
+                    <div class="ellipse-6"></div>
+                    <div class="frame-22">
+                      <img class="img-2" src="img-seal-check.svg" />
+                      <div class="text-wrapper-34">Sleek and Modern Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-23">
+              <img class="ellipse-7" src="img_ellipse-6018.svg" />
+              <img class="ellipse-8" src="img_ellipse-6019.svg" />
+              <img class="ellipse-8" src="img_ellipse-6020.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="frame-24">
+          <div class="overlap-14">
+            <div class="button-CTA-2">
+              <div class="text"><div class="text-wrapper-2">BUY NOW - $194.99</div></div>
+              <div class="icon"><img class="outline-interface" src="img-arrow-right.svg" /></div>
+            </div>
+            <div class="frame-25">
+              <div class="table-wrapper">
+                <div class="table">
+                  <div class="col">
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-35">Dimension</div></div>
+                    </div>
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-35">Weight</div></div>
+                    </div>
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-35">Power Consumption</div></div>
+                    </div>
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-35">Filter Type</div></div>
+                    </div>
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-35">Noise Level</div></div>
+                    </div>
+                    <div class="container-wrapper">
+                      <div class="container"><div class="text-wrapper-35">Warranty</div></div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="cell">
+                      <div class="container"><p class="text-wrapper-36">20&#34; x 10&#34; x 10&#34;</p></div>
+                    </div>
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-36">8 lbs</div></div>
+                    </div>
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-36">30 watt</div></div>
+                    </div>
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-36">HEPA, Activated Carbon, Pre-filter</div></div>
+                    </div>
+                    <div class="cell">
+                      <div class="container"><div class="text-wrapper-36">20 dB</div></div>
+                    </div>
+                    <div class="container-wrapper">
+                      <div class="container"><div class="text-wrapper-36">3 years</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-26">
+                <img class="ellipse-9" src="img-ellipse-6018.png" />
+                <img class="ellipse-9" src="img-ellipse-6021.png" />
+                <img class="ellipse-9" src="img-ellipse-6020.png" />
+              </div>
+            </div>
+          </div>
+          <div class="frame-27">
+            <div class="frame-28">
+              <div class="text-wrapper-37">/PRODUCTS</div>
+              <div class="text-wrapper-38">WEAVE</div>
+              <div class="text-wrapper-38">AIR PURIFIER</div>
+            </div>
+            <p class="text-wrapper-39">
+              Its compact and elegant appearance makes it a stylish addition to any room, providing clean air without
+              compromising on aesthetics stylish addition.
+            </p>
+          </div>
+        </div>
+        <div class="FAQ">
+          <div class="frame-29">
+            <div class="frame-30">
+              <div class="about-WEAVE">/ABOUT WEAVE</div>
+              <div class="text-wrapper-40">YOUR QUESTIONS</div>
+              <div class="text-wrapper-40">OUR ANSWERS</div>
+            </div>
+            <p class="text-wrapper-41">
+              Find answers to the most frequently asked questions about its advanced features, how to use and maintain
+              it, and what makes it the perfect choice for improving your indoor air quality.
+            </p>
+          </div>
+          <div class="frame-31">
+            <div class="frame-32">
+              <div class="o">/O3</div>
+              <div class="frame-33"></div>
+            </div>
+            <div class="frame-34">
+              <p class="text-wrapper-42">Is the Weave air purifier noisy?</p>
+              <p class="text-wrapper-43">
+                The Weave air purifier operates at a whisper-quiet 20 decibels, 
+                making it perfect for use in bedrooms
+                and other quiet spaces.
+              </p>
+            </div>
+          </div>
+          <div class="frame-35">
+            <div class="frame-36">
+              <div class="frame-37">
+                <div class="text-wrapper-44">/01</div>
+                <div class="text-wrapper-45">Filter Replacement Frequency</div>
+              </div>
+              <div class="img-wrapper"><img class="outline-interface" src="img-arrow-right.svg" /></div>
+            </div>
+            <div class="frame-36">
+              <div class="frame-37">
+                <div class="text-wrapper-44">/02</div>
+                <div class="text-wrapper-45">Smart Sensor Technology</div>
+              </div>
+              <div class="img-wrapper"><img class="outline-interface" src="img-arrow-right.svg" /></div>
+            </div>
+            <div class="frame-38">
+              <div class="frame-37">
+                <div class="text-wrapper-46">/03</div>
+                <div class="text-wrapper-47">Noise Level</div>
+              </div>
+              <div class="icon-2"><img class="outline-interface" src="img-arrow-right.svg" /></div>
+            </div>
+            <div class="frame-36">
+              <div class="frame-37">
+                <div class="text-wrapper-44">/04</div>
+                <div class="text-wrapper-45">Cleaning and Maintenance</div>
+              </div>
+              <div class="img-wrapper"><img class="outline-interface" src="img-arrow-right.svg" /></div>
+            </div>
+            <div class="frame-36">
+              <div class="frame-37">
+                <div class="text-wrapper-44">/05</div>
+                <div class="text-wrapper-45">Warranty Information</div>
+              </div>
+              <div class="img-wrapper"><img class="outline-interface" src="img-arrow-right.svg" /></div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="overlap-15">
+            <div class="frame-39">
+              <div class="text-wrapper-48">WEAVE</div>
+              <div class="frame-40">
+                <div class="frame-41">
+                  <div class="text-wrapper-49">Navigations</div>
+                  <div class="frame-42">
+                    <div class="text-wrapper-50">About</div>
+                    <div class="text-wrapper-51">Product</div>
+                    <div class="text-wrapper-51">Features</div>
+                    <div class="text-wrapper-51">Support</div>
+                  </div>
+                </div>
+                <div class="frame-41">
+                  <div class="text-wrapper-49">Information</div>
+                  <div class="frame-42">
+                    <div class="text-wrapper-50">Promotion</div>
+                    <div class="text-wrapper-51">Information Center</div>
+                  </div>
+                </div>
+                <div class="frame-41">
+                  <div class="text-wrapper-49">Resources</div>
+                  <div class="frame-42">
+                    <div class="text-wrapper-50">Forum</div>
+                    <div class="text-wrapper-51">Partner</div>
+                    <div class="text-wrapper-51">Event</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-43">
+              <p class="text-wrapper-52">©2024 WEAVE. All Rights Reserved</p>
+              <div class="social-icon">
+                <div class="group-7"><img class="img-3" src="img-instagram.svg" /></div>
+                <div class="group-7"><img class="img-3" src="img-twitter.svg" /></div>
+                <div class="group-7"><img class="img-3" src="img-youtube.svg" /></div>
+                <div class="group-7"><img class="img-3" src="img-facebook.svg" /></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
